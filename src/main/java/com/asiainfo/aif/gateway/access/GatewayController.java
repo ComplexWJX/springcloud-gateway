@@ -2,9 +2,9 @@ package com.asiainfo.aif.gateway.access;
 
 import com.asiainfo.aif.gateway.service.FallbackService;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.gateway.mvc.ProxyExchange;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
+//import org.springframework.cloud.gateway.mvc.ProxyExchange;
+//import org.springframework.http.ResponseEntity;
+//import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
@@ -37,9 +37,9 @@ public class GatewayController {
         return "dispatch";
     }
 
-    @GetMapping("/proxy/path/**")
-    public ResponseEntity<?> proxyPath(ProxyExchange<byte[]> proxy) throws Exception {
-        String path = proxy.path("/proxy/path/");
-        return proxy.uri(home.toString() + "/foos/" + path).get();
-    }
+//    @GetMapping("/proxy/path/**")
+//    public ResponseEntity<?> proxyPath(ProxyExchange<byte[]> proxy) throws Exception {
+//        String path = proxy.path("/proxy/path/");
+//        return proxy.uri(home.toString() + "/foos/" + path).get();
+//    }
 }

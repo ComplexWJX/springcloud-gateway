@@ -26,6 +26,10 @@ public class GatewayConfiguration {
                         .path(httpConfigProperties.getRequestPath())
                         .filters(f -> f.addRequestHeader("Hello", "World"))
                         .uri(httpConfigProperties.getHttpUri()))
+                .route(p -> p
+                        .path("/uat/wh/workingHoursFill/queryWorkType")
+                        .filters(f -> f.addRequestHeader("Hello", "World"))
+                        .uri(httpConfigProperties.getHttpUri()))
                 /*.route(p ->p
                         .host("*")
                         .filters(f -> f.hystrix(config -> config

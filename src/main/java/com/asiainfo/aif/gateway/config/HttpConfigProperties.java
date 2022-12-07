@@ -11,9 +11,11 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties(prefix = "server")
 @Component
 public class HttpConfigProperties {
-    private String httpUri = "lb://paas-payment";
+    //private String httpUri = "lb://paas-payment";
+    private String httpUri = "http://localhost:8088";
 
-    private String requestPath = "/pay/save";
+//    private String requestPath = "/pay/save";
+    private String requestPath = "/wh/workingHoursFill/queryWorkType";
 
     public String getHttpUri() {
         return httpUri;
