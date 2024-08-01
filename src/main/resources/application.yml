@@ -10,12 +10,18 @@ spring:
     port: 6379
     database: 0
     password: 123456
-#  cloud:
-#    gateway:
-#      discovery:
-#        locator:
-#          enabled: true  #表示注册中心生效，我们可以通过注册中心的服务名进行路由转发
-#      routes:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true  #表示注册中心生效，我们可以通过注册中心的服务名进行路由转发
+      routes:
+        - id: zmp-wh-uat
+          uri: http://localhost:8088
+          predicates:
+            - Path=/zmp-wh-uat/**
+          filters:
+            - StripPrefix=1
 #        - id: after_route
 #          uri: lb://paas-payment #lb://serviceName，lb:// + 注册中心服务  #网关转发地址(网关核心功能就是转发，不改变原请求地址)
 #          predicates:

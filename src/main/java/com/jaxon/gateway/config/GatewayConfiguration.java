@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Primary;
  * @description
  * @date 2019/12/31 0031
  */
-@Configuration
+//@Configuration
 public class GatewayConfiguration {
     @Bean
     public RouteLocator myRoutes(RouteLocatorBuilder builder, HttpConfigProperties httpConfigProperties) {
@@ -25,6 +25,10 @@ public class GatewayConfiguration {
                 .route(p -> p
                         .path(httpConfigProperties.getRequestPath())
                         .filters(f -> f.addRequestHeader("Hello", "World"))
+                        .uri(httpConfigProperties.getHttpUri()))
+                .route(p -> p
+                        .path("/zmp-wh-uat/wh/**")
+                        .filters(f -> f.stripPrefix(1))
                         .uri(httpConfigProperties.getHttpUri()))
                 /*.route(p ->p
                         .host("*")
