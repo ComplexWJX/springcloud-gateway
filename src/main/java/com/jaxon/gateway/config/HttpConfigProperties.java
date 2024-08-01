@@ -1,4 +1,4 @@
-package com.asiainfo.aif.gateway.config;
+package com.jaxon.gateway.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

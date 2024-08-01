@@ -1,6 +1,5 @@
-package com.asiainfo.aif.gateway.rest;
+package com.jaxon.gateway.rest;
 
-import com.asiainfo.aif.gateway.service.FallbackServiceImpl;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;

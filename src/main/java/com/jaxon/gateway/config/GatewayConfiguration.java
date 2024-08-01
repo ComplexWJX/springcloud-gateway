@@ -1,7 +1,7 @@
-package com.asiainfo.aif.gateway.config;
+package com.jaxon.gateway.config;
 
-import com.asiainfo.aif.gateway.filter.HostAddrKeyResolver;
-import com.asiainfo.aif.gateway.filter.UriKeyResolver;
+import com.jaxon.gateway.filter.HostAddrKeyResolver;
+import com.jaxon.gateway.filter.UriKeyResolver;
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;

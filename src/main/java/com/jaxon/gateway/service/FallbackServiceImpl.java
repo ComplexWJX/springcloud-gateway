@@ -1,10 +1,9 @@
-package com.asiainfo.aif.gateway.service;
+package com.jaxon.gateway.service;
 
-import com.asiainfo.aif.gateway.rest.FeignRest;
+import com.jaxon.gateway.rest.FeignRest;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.stereotype.Service;
-import reactor.core.publisher.Mono;
 
 import javax.annotation.Resource;
 

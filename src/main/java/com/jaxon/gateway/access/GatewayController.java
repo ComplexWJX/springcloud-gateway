@@ -1,6 +1,6 @@
-package com.asiainfo.aif.gateway.access;
+package com.jaxon.gateway.access;
 
-import com.asiainfo.aif.gateway.service.FallbackService;
+import com.jaxon.gateway.service.FallbackService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.gateway.mvc.ProxyExchange;
 import org.springframework.http.ResponseEntity;
